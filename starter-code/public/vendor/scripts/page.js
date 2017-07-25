@@ -704,7 +704,7 @@ process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
-// TODO(shtylman)
+// TODO-WORKING(shtylman) -- // HAVE NO IDEA WHAT THIS MEANS
 process.cwd = function () { return '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');

@@ -37,7 +37,8 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <!-- TODO: Refactor the href attributes in the Home and About anchor tags to navigate users to our new client-side routes -->
+          <!-- TODO-WORKING: Refactor the href attributes in the Home and About anchor tags to navigate users to our new client-side routes -->
+          <!-- NEED TO PUT INT / PATHS INTO THE H-REFS -->
           <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
           <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
           <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
@@ -79,19 +80,31 @@
     <footer>
       &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
-    <!-- TODO: Be sure to include the routing functionality with the correct script files.
+    <!-- TODONE-WORKING: Be sure to include the routing functionality with the correct script files.
                Don't forget that the order of your scripts matters - variables have to be
                declared before you can reference them! -->
 
+               <!-- MISSING ONE THAT GOES HERE CDN === CDN -->
+               <!-- It goes on the top because we want this to load before any VIEW materials are loaded.  This is the CDN that works with all our routes... You cannot get information to the DOM with out the proper roads. This is the road, not the car. The car is the view js files... -->
+
+ <!-- EXTERNAL REFERENCES-->
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- INTERNAL REFERENCES -->
+    <!-- HANDLEBARS TEMPLATE -->
     <script src="/vendor/scripts/handlebars.js"></script>
+    <!-- FUNCTIONAL CODE STYLING -->
     <script src="/vendor/scripts/marked.js"></script>
     <script src="vendor/scripts/highlight.pack.js"></script>
+
+<!-- CODE THAT INTERACTS WITH USER -->
+<!-- MODEL -->
     <script src="/scripts/models/article.js"></script>
+<!-- VIEW -->
     <script src="/scripts/views/articleView.js"></script>
+<!-- CONTROL -->
     <script src="/scripts/controllers/articleController.js"></script>
-
     <script src="/scripts/controllers/aboutController.js"></script>
-
   </body>
 </html>
