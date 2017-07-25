@@ -32,8 +32,8 @@ const app = express();
 // This ATTACHES postgress to SQL Databases on our machine
 // POSTGRESS will now talk to Kilavolt in our PSQL
 // conString tells postgres the path to kilavolt which has our database -- the information our server is going QUERY
-const conString = 'postgres://localhost:5432/kilavolt'; // TODONE-WORKING: Don't forget to set your
-
+const conString = 'postgres://postgres:1234@localhost:5432/kilovolt';// TODONE-WORKING: Don't forget to set your
+// const conString = 'postgres://localhost:5432/kilavolt';
 //own conString
 const client = new pg.Client(conString);
 client.connect();

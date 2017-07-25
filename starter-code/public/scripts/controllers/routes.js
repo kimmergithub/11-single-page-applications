@@ -6,13 +6,11 @@ var app = app || {};
 
 // OUR CONTROLLER === WHEN YOU GO HERE ===> LOAD THIS VIEW
 // THE BACKEND WORK BEHIND CLICKING AN Href LINK (research)
-page('/');
+page('/', app.articleController.initArticle());
 
-// new.html is where our ARITCLES Render!
-page('/new', articleController.initArticle());
-
+//We added app here because article controller lives on app!! What what!!
 // about information is on our admin page!
-page('/admin', aboutController.initAbout());
+page('/about', app.aboutController.initAbout());
 
 
 // TODONE-WORKING: What function do you call to activate page.js? Fire it off now, to execute. Note that it does not need to be attached to the 'app' object nor wrapped in an IIFE.
