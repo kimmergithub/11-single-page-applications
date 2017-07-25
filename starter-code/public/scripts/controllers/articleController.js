@@ -10,9 +10,10 @@ var app = app || {};
 
   // Same show hide function on articleController.init = funciton...
   articleController.initArticle = function () {
+    app.Article.fetchAll(app.articleView.initIndexPage);
     console.log('articleController.initArticle is CALLED')
-    $('#about').hide
-    $('#articles').show
+    $('#about').hide()
+    $('#articles').show()
   }
 
   module.articleController = articleController;

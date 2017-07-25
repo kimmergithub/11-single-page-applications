@@ -12,8 +12,8 @@ var app = app || {};
   // INIT === we are chosing to call this aboutController.initAbout because we are initializes
   aboutController.initAbout = function () {
     console.log('aboutController.initAbout is CALLED')
-    $('main').hide
-    $('#about').show
+    $('#articles').hide()
+    $('#about').show()
   }
 
   module.aboutController = aboutController;
