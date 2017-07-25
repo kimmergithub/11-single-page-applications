@@ -1,0 +1,26 @@
+{
+  "name": "11-single-page-applications",
+  "version": "1.0.0",
+  "description": "![CF](https://i.imgur.com/7v5ASc8.png)  Lab 11 SPA Routing ======= [Code of Conduct](https://github.com/codefellows/code-of-conduct)",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pg": "^7.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimmergithub/11-single-page-applications.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimmergithub/11-single-page-applications/issues"
+  },
+  "homepage": "https://github.com/kimmergithub/11-single-page-applications#readme"
+}

@@ -1,19 +1,49 @@
 'use strict';
 
+// TERMINAL === NODE === INSTALLING express, body-parser, pg
+// With NODE & NPM installed, TERMINAL COMMAND: npm init -y ===> initalizes our Package.json
+// START command === inside package.json === scripts ===> "start": "nodemon server.js" NOW our cammand is ===> npm start
+// DOWNLOADING PG, EXPRESS, body-parser
+// TERMINAL INSTALL: npm install -S express body-parser pg
+// pg === installs postgres into NODE & recognized in package.json
+// require pg ALLOWS us to use POSTGRES in our CODE-Based APPLICATION
+// pg === allows us to talk to our kilavolt database on our COMPUTER
 const pg = require('pg');
 const fs = require('fs');
+// EXPRESS === installs express into NODE & recognized in package.json
+// require express ALLOWS us to use EXPRESS in our CODE-Based APPLICATION
+// EXPRESS: how we communicate with our server...
 const express = require('express');
+
+// BODY-PARSER === installs body-parser into NODE & recognized in package.json
+// require BODY-PARSER ALLOWS us to use BODY-PARSER in our CODE-Based APPLICATION
+// BODY-PARSER: when the server places elements into the body --- it protects the data (masking);
 const bodyParser = require('body-parser');
+
+// This is where our SERVER lives === called in the browsers localhost:3000
+// PROCESS: in starter-code! npm startq
 const PORT = process.env.PORT || 3000;
+
+// CALLING EXPRESS
 const app = express();
 // const conString = 'postgres://USERNAME:PASSWORD@HOST:PORT';
-const conString = ''; // TODO: Don't forget to set your own conString
+
+// POSTGRESS "Connection String"
+// This ATTACHES postgress to SQL Databases on our machine
+// POSTGRESS will now talk to Kilavolt in our PSQL
+// conString tells postgres the path to kilavolt which has our database -- the information our server is going QUERY
+const conString = 'postgres://localhost:5432/kilavolt'; // TODONE-WORKING: Don't forget to set your
+
+//own conString
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
 
+// APP === we're talking EXPRESS here (our server)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+// EXPRESS used here
 app.use(express.static('./public'));
 
 app.get('/new', (request, response) => response.sendFile('new.html', {root: './public'}));
